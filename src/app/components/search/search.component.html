@@ -1,0 +1,30 @@
+
+<div class="container top30">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="term">Artist</label>
+      <input type="text" class="form-control" placeholder="Search" [(ngModel)]="term" (keyup)="lookup()">
+    </div>
+
+    <div class="col-md-9" *ngIf="term.length > 1">
+      <h1 class="text-capitalize"> {{ term }} </h1>
+      <hr>
+      
+      
+      <div class="row">
+        <div class="col-md-3 text-center" *ngFor="let artist of _spoti.artists" [routerLink]="['/artist',artist.id]">
+          <img class="img-thumbnail" [src]="artist.images | nophoto">
+          <p>{{ artist.name }}</p>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+  
+</div>
+
+
