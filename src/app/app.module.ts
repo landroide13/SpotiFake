@@ -16,6 +16,7 @@ import { SearchComponent } from './components/search/search.component';
 import { NavbarComponent } from './components/share/navbar/navbar.component';
 import { NophotoPipe } from './pipes/nophoto.pipe';
 import { ArtistComponent } from './components/artist/artist.component';
+import { DomsecurePipe } from './pipes/domsecure.pipe';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ArtistComponent } from './components/artist/artist.component';
     SearchComponent,
     NavbarComponent,
     NophotoPipe,
-    ArtistComponent
+    ArtistComponent,
+    DomsecurePipe
   ],
   imports: [
     BrowserModule,
